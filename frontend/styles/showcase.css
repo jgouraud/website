@@ -1,0 +1,141 @@
+/* Three independent homepage rows: business / research / academic. */
+/* Reserve the scrollbar width when a preview opens/closes to prevent horizontal jitter. */
+html { scrollbar-gutter: stable; }
+.showcase-section { min-width: 0; }
+.showcase-collapse {
+    display: grid; grid-template-rows: 1fr; opacity: 1; visibility: visible;
+    transition: grid-template-rows .35s ease, opacity .25s ease, visibility .35s;
+}
+.showcase-collapse-inner { min-height: 0; overflow: hidden; }
+.main-content[data-active-row="business"] .showcase-section:not([data-showcase-row="business"]) .showcase-collapse,
+.main-content[data-active-row="research"] .showcase-section:not([data-showcase-row="research"]) .showcase-collapse,
+.main-content[data-active-row="academic"] .showcase-section:not([data-showcase-row="academic"]) .showcase-collapse {
+    grid-template-rows: 0fr; opacity: 0; visibility: hidden; pointer-events: none;
+}
+/* A card in the middle/bottom row must not jump up when rows ABOVE it hide.
+   Keep those rows' layout space, but fade away their cards; rows BELOW the
+   hovered card still collapse completely, just like they do for the demos.
+   This keeps the hit target stationary until the pointer actually leaves it. */
+.main-content[data-active-row="research"] .showcase-section[data-showcase-row="business"] .showcase-collapse,
+.main-content[data-active-row="academic"] .showcase-section[data-showcase-row="business"] .showcase-collapse,
+.main-content[data-active-row="academic"] .showcase-section[data-showcase-row="research"] .showcase-collapse {
+    grid-template-rows: 1fr;
+}
+.showcase-section .show-all { cursor: pointer; }
+.showcase-section .show-all[aria-expanded="true"] { text-decoration: underline !important; }
+/* Keep a consistent project-card language for academic work and research papers. */
+.showcase-section .projects-grid {
+    display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(10px, 1.5vw, 20px);
+}
+.showcase-section .research-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.showcase-section .project-card.q-card {
+    container-type: inline-size; position: relative; display: flex; flex-direction: column;
+    justify-self: stretch; align-self: start; width: 100%; max-width: none;
+    min-width: 0; padding: 10px 12px; gap: 0 !important;
+    border-radius: 14px; background: rgba(255,255,255,.62); border: 1px solid var(--line);
+    box-shadow: var(--shadow); overflow: hidden;
+    transition: border-color .2s ease, box-shadow .2s ease, background-color .2s ease;
+}
+.showcase-section .project-card.q-card:hover,
+.showcase-section .project-card.q-card.is-hover-active,
+.showcase-section .project-card.q-card.is-row-active,
+.showcase-section .project-card.q-card:focus-within {
+    border-color: var(--blue); box-shadow: 0 8px 24px rgba(12, 67, 139, .15);
+}
+.showcase-section .project-card-clickable { cursor: pointer; }
+.showcase-section .project-bottom {
+    contain: none; display: flex; justify-content: space-between; align-items: center;
+    min-height: 38px; padding: 0; gap: 8px !important;
+}
+.showcase-section .project-title { min-width: 0; overflow-wrap: anywhere; font-size: clamp(13px, 1.2vw, 17px) !important; }
+.showcase-section .project-image-reveal {
+    width: 100%; max-height: 0; margin-top: 0; opacity: 0; overflow: hidden;
+    border-radius: 10px; display: flex; align-items: center; justify-content: center;
+    transition: max-height .38s ease, opacity .28s ease, margin-top .38s ease;
+}
+.showcase-section .project-card:hover .project-image-reveal,
+.showcase-section .project-card.is-hover-active .project-image-reveal,
+.showcase-section .project-card.is-row-active .project-image-reveal,
+.showcase-section .project-card:focus-within .project-image-reveal {
+    max-height: 270px; margin-top: 8px; opacity: 1;
+}
+/* Keep the two lower rows anchored while their previews expand upward. */
+.research-section .project-card.q-card,
+.projects-section .project-card.q-card { overflow: visible; }
+.research-section .project-image-reveal,
+.projects-section .project-image-reveal {
+    position: absolute; inset-inline: 0; bottom: calc(100% + 8px);
+    background: var(--card); box-shadow: var(--shadow);
+}
+.research-section .project-card:is(:hover, .is-hover-active, :focus-within) .project-image-reveal,
+.research-section .project-card.is-row-active .project-image-reveal,
+.projects-section .project-card:is(:hover, .is-hover-active, :focus-within) .project-image-reveal,
+.projects-section .project-card.is-row-active .project-image-reveal { margin-top: 0; }
+.main-content[data-active-row="research"] .research-section,
+.main-content[data-active-row="academic"] .projects-section { position: relative; z-index: 2; }
+.main-content[data-active-row="research"] .research-section .showcase-collapse-inner,
+.main-content[data-active-row="academic"] .projects-section .showcase-collapse-inner { overflow: visible; }
+.main-content[data-active-row="research"] .research-section .section-title,
+.main-content[data-active-row="academic"] .projects-section .section-title { visibility: hidden; }
+.showcase-section .project-image {
+    display: block; width: 100%; height: auto; max-width: 100%; max-height: 245px;
+    aspect-ratio: 16 / 9; object-fit: contain; border-radius: 9px;
+}
+.showcase-section .project-image-placeholder {
+    width: 100%; min-height: 140px; aspect-ratio: 16 / 9;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px;
+    color: #286eba; background: #e9f3ff; border: 1px solid var(--line); border-radius: 9px;
+}
+.showcase-section .project-image-placeholder .q-icon { font-size: 60px !important; }
+.showcase-section .project-image-placeholder .q-label { font-size: 12px; font-weight: 650; }
+.showcase-section .project-card .circle-arrow {
+    opacity: 0; transform: translateX(-4px);
+    transition: opacity .2s ease, transform .2s ease;
+}
+.showcase-section .project-card:hover .circle-arrow,
+.showcase-section .project-card.is-hover-active .circle-arrow,
+.showcase-section .project-card.is-row-active .circle-arrow,
+.showcase-section .project-card:focus-within .circle-arrow {
+    opacity: 1; transform: translateX(0);
+}
+.showcase-section .project-card-overlay { z-index: 2; }
+.research-figure-fallback { min-height: 160px; text-align: center; }
+/* Use the same hover-to-reveal behavior for business demos, without an external JS file. */
+.showcase-section .demo-card:hover .demo-banner,
+.showcase-section .demo-card.is-hover-active .demo-banner,
+.showcase-section .demo-card.is-row-active .demo-banner,
+.showcase-section .demo-card:focus-within .demo-banner { height: calc(100cqw * 1024 / 1536); }
+.showcase-section .demo-card-clickable { cursor: pointer; }
+.body--dark .showcase-section .project-card.q-card {
+    background: linear-gradient(145deg, #133555, #0d2745);
+    border-color: #416f9e;
+}
+.body--dark .showcase-section .project-card.q-card:is(:hover, .is-hover-active, :focus-within) {
+    background: linear-gradient(145deg, #163c61, #102d4e);
+    border-color: #91c9ff;
+}
+.body--dark .showcase-section .project-card.q-card.is-row-active {
+    background: linear-gradient(145deg, #163c61, #102d4e);
+    border-color: #91c9ff;
+}
+.body--dark .showcase-section .project-image-reveal {
+    background: #091f39;
+    border: 1px solid #416f9e;
+}
+.body--dark .showcase-section .project-image-placeholder { background: #0b2746; color: #b9ddff; }
+@media (max-width: 1100px) {
+    .showcase-section .projects-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .showcase-section .research-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 600px) {
+    .showcase-section .projects-grid,
+    .showcase-section .research-grid { grid-template-columns: 1fr; }
+    .showcase-section .project-card.q-card { display: flex; padding: 8px 10px; }
+    .showcase-section .project-image { width: 100%; height: auto; max-height: 210px; }
+    .showcase-section .project-bottom { min-height: 32px; }
+    .showcase-section .project-title { font-size: 14px !important; }
+    .showcase-section .project-card .circle-arrow { display: flex; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .showcase-collapse, .showcase-section .project-image-reveal { transition: none; }
+}

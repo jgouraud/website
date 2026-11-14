@@ -1,0 +1,192 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="950" height="610" viewBox="276 250 950 610" role="img" aria-labelledby="title desc" aria-label="Dark mode visual parts search interface with no white contour strokes">
+<title id="title">Clip-based visual search — dark mode, no white outlines</title>
+<desc id="desc">Editable vector interface in dark navy with muted slate-blue contours and bright blue selected-state accents. Three results show a metal gear, bolt, and ball bearing.</desc>
+<defs>
+  <linearGradient id="chrome" x1="0" y1="0" x2=".15" y2="1"><stop stop-color="#253f64"/><stop offset=".12" stop-color="#19314f"/><stop offset=".56" stop-color="#11263f"/><stop offset="1" stop-color="#0b1a30"/></linearGradient>
+  <linearGradient id="chromeTop" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#2a476c"/><stop offset=".12" stop-color="#193251"/><stop offset="1" stop-color="#10233b"/></linearGradient>
+  <linearGradient id="blueButton" x1="0" y1="0" x2=".9" y2="1"><stop stop-color="#55b9ff"/><stop offset=".58" stop-color="#258cff"/><stop offset="1" stop-color="#1158db"/></linearGradient>
+  <linearGradient id="upperPanel" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#1c2e47"/><stop offset=".65" stop-color="#172840"/><stop offset="1" stop-color="#14243b"/></linearGradient>
+  <linearGradient id="lowerPanel" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#152439"/><stop offset="1" stop-color="#101e32"/></linearGradient>
+  <linearGradient id="tile" x1="0" y1="0" x2=".2" y2="1"><stop stop-color="#263b55"/><stop offset=".64" stop-color="#1b2e48"/><stop offset="1" stop-color="#182941"/></linearGradient>
+  <linearGradient id="selectedTile" x1="0" y1="0" x2=".3" y2="1"><stop stop-color="#263f60"/><stop offset="1" stop-color="#1d3452"/></linearGradient>
+  <linearGradient id="metal" x1=".10" y1="0" x2=".92" y2="1"><stop stop-color="#cfdae5"/><stop offset=".15" stop-color="#b7c2cd"/><stop offset=".32" stop-color="#687785"/><stop offset=".52" stop-color="#b0bac6"/><stop offset=".74" stop-color="#667382"/><stop offset="1" stop-color="#3c4a5a"/></linearGradient>
+  <linearGradient id="metalEdge" x1="0" y1="0" x2=".2" y2="1"><stop stop-color="#526576"/><stop offset=".55" stop-color="#758594"/><stop offset="1" stop-color="#303f51"/></linearGradient>
+  <linearGradient id="metalBevel" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d1dbe6"/><stop offset=".22" stop-color="#6c7b8d"/><stop offset=".51" stop-color="#dce4ec"/><stop offset=".8" stop-color="#536475"/><stop offset="1" stop-color="#bdcad7"/></linearGradient>
+  <linearGradient id="holeDepth" x1="0" y1="0" x2=".65" y2="1"><stop stop-color="#0c1b2d"/><stop offset=".40" stop-color="#233b55"/><stop offset="1" stop-color="#415c77"/></linearGradient>
+  <linearGradient id="shaft" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#c7d4e2"/><stop offset=".16" stop-color="#9aa8b6"/><stop offset=".46" stop-color="#596879"/><stop offset=".72" stop-color="#aeb9c4"/><stop offset="1" stop-color="#526071"/></linearGradient>
+  <linearGradient id="head" x1="0" y1="0" x2=".95" y2="1"><stop stop-color="#cbd8e5"/><stop offset=".36" stop-color="#b5c1cc"/><stop offset=".75" stop-color="#667687"/><stop offset="1" stop-color="#8c9ba9"/></linearGradient>
+  <radialGradient id="bearingBall" cx=".3" cy=".24" r=".78"><stop stop-color="#d3dce5"/><stop offset=".19" stop-color="#c4cdd7"/><stop offset=".52" stop-color="#738292"/><stop offset=".8" stop-color="#384552"/><stop offset="1" stop-color="#27323b"/></radialGradient>
+  <linearGradient id="race" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#141e28"/><stop offset=".34" stop-color="#52606c"/><stop offset=".70" stop-color="#202a34"/><stop offset="1" stop-color="#6a7885"/></linearGradient>
+  <linearGradient id="chromeRim" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#c9d5df"/><stop offset=".21" stop-color="#94a1ac"/><stop offset=".53" stop-color="#dae3ec"/><stop offset=".78" stop-color="#54616f"/><stop offset="1" stop-color="#a7b5c3"/></linearGradient>
+  <linearGradient id="cut" x1="0" y1="0" x2=".9" y2="1"><stop stop-color="#122438"/><stop offset=".57" stop-color="#31465d"/><stop offset="1" stop-color="#263d54"/></linearGradient>
+  <filter id="smallShadow" x="-25%" y="-30%" width="150%" height="180%"><feGaussianBlur stdDeviation="5"/></filter>
+  <filter id="partShadow" x="-25%" y="-25%" width="150%" height="160%"><feGaussianBlur stdDeviation="7"/></filter>
+  <clipPath id="outerClip"><rect x="280" y="254" width="942" height="602" rx="77"/></clipPath>
+  <clipPath id="boltShaft"><rect x="-116" y="-22" width="187" height="44" rx="17"/></clipPath>
+  <g id="gearArt">
+    <ellipse cx="7" cy="33" rx="88" ry="19" fill="#294e6c" opacity=".22" filter="url(#partShadow)"/>
+    <circle cx="0" cy="9" r="41" fill="url(#holeDepth)"/>
+    <circle cx="2" cy="12" r="35" fill="#15283e"/>
+    <path d="M -20.19 -75.34 L -15.55 -76.43 L -12.56 -84.07 L -8.72 -99.62 L 8.72 -99.62 L 12.56 -84.07 L 15.55 -76.43 L 20.19 -75.34 L 20.19 -75.34 L 24.75 -73.97 L 31.15 -79.09 L 42.26 -90.63 L 57.36 -81.92 L 52.91 -66.52 L 51.68 -58.42 L 55.15 -55.15 L 55.15 -55.15 L 58.42 -51.68 L 66.52 -52.91 L 76.18 -53.34 L 84.29 -39.30 L 79.09 -31.15 L 73.97 -24.75 L 75.34 -20.19 L 75.34 -20.19 L 76.43 -15.55 L 84.07 -12.56 L 99.62 -8.72 L 99.62 8.72 L 84.07 12.56 L 76.43 15.55 L 75.34 20.19 L 75.34 20.19 L 73.97 24.75 L 79.09 31.15 L 90.63 42.26 L 81.92 57.36 L 66.52 52.91 L 58.42 51.68 L 55.15 55.15 L 55.15 55.15 L 51.68 58.42 L 52.91 66.52 L 57.36 81.92 L 42.26 90.63 L 31.15 79.09 L 24.75 73.97 L 20.19 75.34 L 20.19 75.34 L 15.55 76.43 L 12.56 84.07 L 8.72 99.62 L -8.72 99.62 L -12.56 84.07 L -15.55 76.43 L -20.19 75.34 L -20.19 75.34 L -24.75 73.97 L -31.15 79.09 L -42.26 90.63 L -57.36 81.92 L -52.91 66.52 L -51.68 58.42 L -55.15 55.15 L -55.15 55.15 L -58.42 51.68 L -66.52 52.91 L -81.92 57.36 L -90.63 42.26 L -79.09 31.15 L -73.97 24.75 L -75.34 20.19 L -75.34 20.19 L -76.43 15.55 L -84.07 12.56 L -99.62 8.72 L -99.62 -8.72 L -84.07 -12.56 L -76.43 -15.55 L -75.34 -20.19 L -75.34 -20.19 L -73.97 -24.75 L -79.09 -31.15 L -90.63 -42.26 L -81.92 -57.36 L -66.52 -52.91 L -58.42 -51.68 L -55.15 -55.15 L -55.15 -55.15 L -51.68 -58.42 L -52.91 -66.52 L -57.36 -81.92 L -42.26 -90.63 L -31.15 -79.09 L -24.75 -73.97 L -20.19 -75.34 Z M 40 0 A 40 40 0 1 0 -40 0 A 40 40 0 1 0 40 0 Z" fill="url(#metalEdge)" fill-rule="evenodd" transform="translate(0 13)" stroke="#475769" stroke-width="1.1"/>
+    <path d="M -20.19 -75.34 L -15.55 -76.43 L -12.56 -84.07 L -8.72 -99.62 L 8.72 -99.62 L 12.56 -84.07 L 15.55 -76.43 L 20.19 -75.34 L 20.19 -75.34 L 24.75 -73.97 L 31.15 -79.09 L 42.26 -90.63 L 57.36 -81.92 L 52.91 -66.52 L 51.68 -58.42 L 55.15 -55.15 L 55.15 -55.15 L 58.42 -51.68 L 66.52 -52.91 L 76.18 -53.34 L 84.29 -39.30 L 79.09 -31.15 L 73.97 -24.75 L 75.34 -20.19 L 75.34 -20.19 L 76.43 -15.55 L 84.07 -12.56 L 99.62 -8.72 L 99.62 8.72 L 84.07 12.56 L 76.43 15.55 L 75.34 20.19 L 75.34 20.19 L 73.97 24.75 L 79.09 31.15 L 90.63 42.26 L 81.92 57.36 L 66.52 52.91 L 58.42 51.68 L 55.15 55.15 L 55.15 55.15 L 51.68 58.42 L 52.91 66.52 L 57.36 81.92 L 42.26 90.63 L 31.15 79.09 L 24.75 73.97 L 20.19 75.34 L 20.19 75.34 L 15.55 76.43 L 12.56 84.07 L 8.72 99.62 L -8.72 99.62 L -12.56 84.07 L -15.55 76.43 L -20.19 75.34 L -20.19 75.34 L -24.75 73.97 L -31.15 79.09 L -42.26 90.63 L -57.36 81.92 L -52.91 66.52 L -51.68 58.42 L -55.15 55.15 L -55.15 55.15 L -58.42 51.68 L -66.52 52.91 L -81.92 57.36 L -90.63 42.26 L -79.09 31.15 L -73.97 24.75 L -75.34 20.19 L -75.34 20.19 L -76.43 15.55 L -84.07 12.56 L -99.62 8.72 L -99.62 -8.72 L -84.07 -12.56 L -76.43 -15.55 L -75.34 -20.19 L -75.34 -20.19 L -73.97 -24.75 L -79.09 -31.15 L -90.63 -42.26 L -81.92 -57.36 L -66.52 -52.91 L -58.42 -51.68 L -55.15 -55.15 L -55.15 -55.15 L -51.68 -58.42 L -52.91 -66.52 L -57.36 -81.92 L -42.26 -90.63 L -31.15 -79.09 L -24.75 -73.97 L -20.19 -75.34 Z M 40 0 A 40 40 0 1 0 -40 0 A 40 40 0 1 0 40 0 Z" fill="url(#metal)" fill-rule="evenodd" stroke="#546577" stroke-width="1.65" stroke-linejoin="round"/>
+    <path d="M -8.63 -98.62 L -4.87 -92.87 L -5.86 -83.80 L 5.86 -83.80 L 4.87 -92.87 L 8.63 -98.62 Z" fill="#c3d0dd" opacity="0.21"/>
+    <path d="M 41.84 -89.72 L 42.22 -82.86 L 36.82 -75.50 L 46.97 -69.64 L 50.65 -78.00 L 56.78 -81.10 Z" fill="#293a49" opacity="0.13"/>
+    <path d="M 81.10 -56.78 L 78.00 -50.65 L 69.64 -46.97 L 75.50 -36.82 L 82.86 -42.22 L 89.72 -41.84 Z" fill="#c3d0dd" opacity="0.21"/>
+    <path d="M 98.62 -8.63 L 92.87 -4.87 L 83.80 -5.86 L 83.80 5.86 L 92.87 4.87 L 98.62 8.63 Z" fill="#293a49" opacity="0.13"/>
+    <path d="M 89.72 41.84 L 82.86 42.22 L 75.50 36.82 L 69.64 46.97 L 78.00 50.65 L 81.10 56.78 Z" fill="#c3d0dd" opacity="0.21"/>
+    <path d="M 56.78 81.10 L 50.65 78.00 L 46.97 69.64 L 36.82 75.50 L 42.22 82.86 L 41.84 89.72 Z" fill="#293a49" opacity="0.13"/>
+    <path d="M 8.63 98.62 L 4.87 92.87 L 5.86 83.80 L -5.86 83.80 L -4.87 92.87 L -8.63 98.62 Z" fill="#c3d0dd" opacity="0.21"/>
+    <path d="M -41.84 89.72 L -42.22 82.86 L -36.82 75.50 L -46.97 69.64 L -50.65 78.00 L -56.78 81.10 Z" fill="#293a49" opacity="0.13"/>
+    <path d="M -81.10 56.78 L -78.00 50.65 L -69.64 46.97 L -75.50 36.82 L -82.86 42.22 L -89.72 41.84 Z" fill="#c3d0dd" opacity="0.21"/>
+    <path d="M -98.62 8.63 L -92.87 4.87 L -83.80 5.86 L -83.80 -5.86 L -92.87 -4.87 L -98.62 -8.63 Z" fill="#293a49" opacity="0.13"/>
+    <path d="M -89.72 -41.84 L -82.86 -42.22 L -75.50 -36.82 L -69.64 -46.97 L -78.00 -50.65 L -81.10 -56.78 Z" fill="#c3d0dd" opacity="0.21"/>
+    <path d="M -56.78 -81.10 L -50.65 -78.00 L -46.97 -69.64 L -36.82 -75.50 L -42.22 -82.86 L -41.84 -89.72 Z" fill="#293a49" opacity="0.13"/>
+    <path d="M 54 0 A 54 54 0 1 0 -54 0 A 54 54 0 1 0 54 0 Z M 40 0 A 40 40 0 1 0 -40 0 A 40 40 0 1 0 40 0 Z" fill="url(#metalBevel)" fill-rule="evenodd" stroke="#526071" stroke-width="1.5"/>
+    <circle r="47" fill="none" stroke="#819cb1" stroke-width="1.8" opacity=".47"/>
+    <circle r="40" fill="none" stroke="#364555" stroke-width="2.4"/>
+    <path d="M -35 -18 A 40 40 0 0 1 25 -31" fill="none" stroke="#a7bac9" stroke-width="2.1" opacity=".85"/>
+  </g>
+  <g id="boltArt">
+    <ellipse cx="0" cy="33" rx="122" ry="15" fill="#2c4c68" opacity=".18" filter="url(#partShadow)"/>
+    <rect x="-116" y="-22" width="187" height="44" rx="17" fill="url(#shaft)" stroke="#647483" stroke-width="1.6"/>
+    <g clip-path="url(#boltShaft)">
+      <path d="M -127 -24 L -103 24" fill="none" stroke="#2c3e4f" opacity=".62" stroke-width="4.8"/>
+      <path d="M -124 -25 L -100 24" fill="none" stroke="#a7bac9" opacity=".58" stroke-width="2.1"/>
+      <path d="M -116 -24 L -92 24" fill="none" stroke="#2c3e4f" opacity=".62" stroke-width="4.8"/>
+      <path d="M -113 -25 L -89 24" fill="none" stroke="#a7bac9" opacity=".58" stroke-width="2.1"/>
+      <path d="M -105 -24 L -81 24" fill="none" stroke="#2c3e4f" opacity=".62" stroke-width="4.8"/>
+      <path d="M -102 -25 L -78 24" fill="none" stroke="#a7bac9" opacity=".58" stroke-width="2.1"/>
+      <path d="M -94 -24 L -70 24" fill="none" stroke="#2c3e4f" opacity=".62" stroke-width="4.8"/>
+      <path d="M -91 -25 L -67 24" fill="none" stroke="#a7bac9" opacity=".58" stroke-width="2.1"/>
+      <path d="M -83 -24 L -59 24" fill="none" stroke="#2c3e4f" opacity=".62" stroke-width="4.8"/>
+      <path d="M -80 -25 L -56 24" fill="none" stroke="#a7bac9" opacity=".58" stroke-width="2.1"/>
+      <path d="M -72 -24 L -48 24" fill="none" stroke="#2c3e4f" opacity=".62" stroke-width="4.8"/>
+      <path d="M -69 -25 L -45 24" fill="none" stroke="#a7bac9" opacity=".58" stroke-width="2.1"/>
+      <path d="M -61 -24 L -37 24" fill="none" stroke="#2c3e4f" opacity=".62" stroke-width="4.8"/>
+      <path d="M -58 -25 L -34 24" fill="none" stroke="#a7bac9" opacity=".58" stroke-width="2.1"/>
+      <path d="M -50 -24 L -26 24" fill="none" stroke="#2c3e4f" opacity=".62" stroke-width="4.8"/>
+      <path d="M -47 -25 L -23 24" fill="none" stroke="#a7bac9" opacity=".58" stroke-width="2.1"/>
+      <path d="M -39 -24 L -15 24" fill="none" stroke="#2c3e4f" opacity=".62" stroke-width="4.8"/>
+      <path d="M -36 -25 L -12 24" fill="none" stroke="#a7bac9" opacity=".58" stroke-width="2.1"/>
+      <path d="M -28 -24 L -4 24" fill="none" stroke="#2c3e4f" opacity=".62" stroke-width="4.8"/>
+      <path d="M -25 -25 L -1 24" fill="none" stroke="#a7bac9" opacity=".58" stroke-width="2.1"/>
+      <path d="M -17 -24 L 7 24" fill="none" stroke="#2c3e4f" opacity=".62" stroke-width="4.8"/>
+      <path d="M -14 -25 L 10 24" fill="none" stroke="#a7bac9" opacity=".58" stroke-width="2.1"/>
+      <path d="M -6 -24 L 18 24" fill="none" stroke="#2c3e4f" opacity=".62" stroke-width="4.8"/>
+      <path d="M -3 -25 L 21 24" fill="none" stroke="#a7bac9" opacity=".58" stroke-width="2.1"/>
+      <path d="M 5 -24 L 29 24" fill="none" stroke="#2c3e4f" opacity=".62" stroke-width="4.8"/>
+      <path d="M 8 -25 L 32 24" fill="none" stroke="#a7bac9" opacity=".58" stroke-width="2.1"/>
+      <path d="M 16 -24 L 40 24" fill="none" stroke="#2c3e4f" opacity=".62" stroke-width="4.8"/>
+      <path d="M 19 -25 L 43 24" fill="none" stroke="#a7bac9" opacity=".58" stroke-width="2.1"/>
+      <path d="M 27 -24 L 51 24" fill="none" stroke="#2c3e4f" opacity=".62" stroke-width="4.8"/>
+      <path d="M 30 -25 L 54 24" fill="none" stroke="#a7bac9" opacity=".58" stroke-width="2.1"/>
+      <path d="M 38 -24 L 62 24" fill="none" stroke="#2c3e4f" opacity=".62" stroke-width="4.8"/>
+      <path d="M 41 -25 L 65 24" fill="none" stroke="#a7bac9" opacity=".58" stroke-width="2.1"/>
+      <path d="M 49 -24 L 73 24" fill="none" stroke="#2c3e4f" opacity=".62" stroke-width="4.8"/>
+      <path d="M 52 -25 L 76 24" fill="none" stroke="#a7bac9" opacity=".58" stroke-width="2.1"/>
+    </g>
+    <ellipse cx="-115" cy="0" rx="8" ry="21" fill="url(#chromeRim)" stroke="#697b8b" stroke-width="1.3"/>
+    <path d="M 53 -24 L 72 -28 L 77 25 L 55 23 Z" fill="url(#metalEdge)" stroke="#4a5868" stroke-width="1.4"/>
+    <path d="M 69 -28 L 86 -39 L 120 -37 L 136 -19 L 136 19 L 120 37 L 86 39 L 69 28 Z" fill="url(#head)" stroke="#657382" stroke-width="1.5" stroke-linejoin="round"/>
+    <path d="M 69 -28 L 86 -39 L 120 -37 L 103 -24 Z" fill="#bbcad9" opacity=".52"/>
+    <path d="M 103 -24 L 120 -37 L 136 -19 L 136 19 L 119 26 L 103 14 Z" fill="#405065" opacity=".28"/>
+    <path d="M 69 28 L 86 39 L 120 37 L 119 26 L 103 14 Z" fill="#394958" opacity=".30"/>
+    <path d="M 69 -28 L 103 -24 L 103 14 L 69 28" fill="none" stroke="#8fa9bc" stroke-width="1.7" opacity=".63"/>
+  </g>
+  <g id="bearingArt">
+    <ellipse cx="6" cy="96" rx="85" ry="15" fill="#24465f" opacity=".22" filter="url(#partShadow)"/>
+    <circle cx="7" cy="7" r="87" fill="#687584" stroke="#3a4655" stroke-width="2"/>
+    <circle r="87" fill="url(#chromeRim)" stroke="#687584" stroke-width="2"/>
+    <path d="M 87 0 A 87 87 0 1 0 -87 0 A 87 87 0 1 0 87 0 Z M 72 0 A 72 72 0 1 0 -72 0 A 72 72 0 1 0 72 0 Z" fill="url(#chromeRim)" fill-rule="evenodd"/>
+    <circle r="73" fill="url(#race)" stroke="#4b5563" stroke-width="2"/>
+    <circle r="42" fill="url(#race)"/>
+    <circle cx="1.80" cy="-55.00" r="13.9" fill="#1c2730" opacity=".68"/>
+    <circle cx="0.00" cy="-58.00" r="13.1" fill="url(#bearingBall)" stroke="#566372" stroke-width=".6"/>
+    <circle cx="39.08" cy="-41.43" r="13.9" fill="#1c2730" opacity=".68"/>
+    <circle cx="37.28" cy="-44.43" r="13.1" fill="url(#bearingBall)" stroke="#566372" stroke-width=".6"/>
+    <circle cx="58.92" cy="-7.07" r="13.9" fill="#1c2730" opacity=".68"/>
+    <circle cx="57.12" cy="-10.07" r="13.1" fill="url(#bearingBall)" stroke="#566372" stroke-width=".6"/>
+    <circle cx="52.03" cy="32.00" r="13.9" fill="#1c2730" opacity=".68"/>
+    <circle cx="50.23" cy="29.00" r="13.1" fill="url(#bearingBall)" stroke="#566372" stroke-width=".6"/>
+    <circle cx="21.64" cy="57.50" r="13.9" fill="#1c2730" opacity=".68"/>
+    <circle cx="19.84" cy="54.50" r="13.1" fill="url(#bearingBall)" stroke="#566372" stroke-width=".6"/>
+    <circle cx="-18.04" cy="57.50" r="13.9" fill="#1c2730" opacity=".68"/>
+    <circle cx="-19.84" cy="54.50" r="13.1" fill="url(#bearingBall)" stroke="#566372" stroke-width=".6"/>
+    <circle cx="-48.43" cy="32.00" r="13.9" fill="#1c2730" opacity=".68"/>
+    <circle cx="-50.23" cy="29.00" r="13.1" fill="url(#bearingBall)" stroke="#566372" stroke-width=".6"/>
+    <circle cx="-55.32" cy="-7.07" r="13.9" fill="#1c2730" opacity=".68"/>
+    <circle cx="-57.12" cy="-10.07" r="13.1" fill="url(#bearingBall)" stroke="#566372" stroke-width=".6"/>
+    <circle cx="-35.48" cy="-41.43" r="13.9" fill="#1c2730" opacity=".68"/>
+    <circle cx="-37.28" cy="-44.43" r="13.1" fill="url(#bearingBall)" stroke="#566372" stroke-width=".6"/>
+    <circle r="48" fill="#364656" opacity=".65"/>
+    <path d="M 48 0 A 48 48 0 1 0 -48 0 A 48 48 0 1 0 48 0 Z M 28 0 A 28 28 0 1 0 -28 0 A 28 28 0 1 0 28 0 Z" fill="url(#chromeRim)" fill-rule="evenodd" stroke="#82909e" stroke-width="1.2"/>
+    <circle r="28" fill="url(#cut)" stroke="#505f6e" stroke-width="2"/>
+    <ellipse cx="1" cy="1" rx="21.5" ry="23" fill="#15283e"/>
+    <path d="M -19 -21 A 29 29 0 0 1 22 -18" fill="none" stroke="#9fc3df" stroke-width="2" opacity=".86"/>
+    <circle r="80" fill="none" stroke="#7d95ac" stroke-width="2" opacity=".34"/>
+    <circle r="73" fill="none" stroke="#263341" stroke-width="2.4"/>
+  </g>
+</defs>
+
+<!-- Browser window, tightly framed without an external backdrop or shadow. -->
+<rect x="280.5" y="254" width="941" height="602" rx="77" fill="url(#chrome)" stroke="#23466c" stroke-width="2"/>
+<g clip-path="url(#outerClip)">
+  <rect x="289" y="263" width="924" height="116" rx="68" fill="url(#chromeTop)"/>
+  <path d="M 289 330 H 1213" stroke="#071329" stroke-width="6" opacity=".5"/>
+  <rect x="290" y="329" width="922" height="515" rx="53" fill="#0d192b" stroke="#24405f" stroke-width="2.8"/>
+  <path d="M 343 335 H 1159" stroke="#7ba8d3" opacity=".28" stroke-width="3"/>
+</g>
+<circle cx="355" cy="296" r="12.5" fill="#759dc8" stroke="#6388ad" stroke-width="1"/>
+<circle cx="400" cy="296" r="12.5" fill="#759dc8" stroke="#6388ad" stroke-width="1"/>
+<circle cx="445" cy="296" r="12.5" fill="#759dc8" stroke="#6388ad" stroke-width="1"/>
+
+<!-- Search input: its own tinted compartment -->
+<rect x="309" y="347" width="886" height="207" rx="27" fill="url(#upperPanel)" stroke="#2c4560" stroke-width="1.6"/>
+<rect x="328" y="367" width="7" height="10" rx="3.5" fill="#48a3ff"/>
+<text x="344" y="378" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" letter-spacing="2.1" fill="#9cc8ff">SEARCH INPUT</text>
+
+<!-- Clip upload tile -->
+<rect x="334" y="393" width="187" height="141" rx="25" fill="#050d1c" opacity=".52" filter="url(#smallShadow)"/>
+<rect x="331" y="391" width="188" height="143" rx="25" fill="#1d3652" stroke="#58a9ff" stroke-width="3.3" stroke-dasharray="14 11"/>
+<use href="#gearArt" xlink:href="#gearArt" transform="translate(425 462) scale(.51 .50)"/>
+<circle cx="496" cy="506" r="33" fill="url(#blueButton)" stroke="#175c9c" stroke-width="2.2"/>
+<path d="M 496 520 V 490 M 483 503 L 496 490 L 509 503" fill="none" stroke="#9fc3df" stroke-width="5.8" stroke-linecap="round" stroke-linejoin="round"/>
+
+<!-- query field -->
+<path d="M 544 407 V 515" stroke="#4b6685" stroke-width="3.2" stroke-linecap="round"/>
+<rect x="567" y="410" width="602" height="89" rx="45" fill="#020918" opacity=".54" filter="url(#smallShadow)"/>
+<rect x="562" y="407" width="607" height="89" rx="44.5" fill="#1e3049" stroke="#435c7d" stroke-width="2.8"/>
+<text x="591" y="460" font-family="Arial, Helvetica, sans-serif" font-size="25.5" font-weight="400" letter-spacing="-.6" fill="#eaf2ff">dented gear with large central bore</text>
+<path d="M 1086 407 H 1126 Q 1169 407 1169 451 V 451 Q 1169 495 1126 496 H 1086 Z" fill="url(#blueButton)"/>
+<path d="M 1087 409 H 1126 Q 1166 409 1167 450" fill="none" stroke="#3d85c2" stroke-width="2.2" opacity=".8"/>
+<circle cx="1120" cy="446" r="17" fill="none" stroke="#9fc3df" stroke-width="6.5"/>
+<path d="M 1133 459 L 1147 474" stroke="#9fc3df" stroke-width="7" stroke-linecap="round"/>
+
+<!-- A deliberate break between query and result surfaces -->
+<path d="M 329 563 H 1176" stroke="#3b5470" stroke-width="2" opacity=".8"/>
+<path d="M 329 563 H 473" stroke="#4c9fff" stroke-width="3" stroke-linecap="round"/>
+
+<!-- Results: different background and explicit heading -->
+<rect x="309" y="578" width="886" height="258" rx="27" fill="url(#lowerPanel)" stroke="#293f58" stroke-width="1.7"/>
+<rect x="332" y="596" width="7" height="10" rx="3.5" fill="#48a3ff"/>
+<text x="348" y="608" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" letter-spacing="1.9" fill="#a4c6ef">VISUAL MATCHES</text>
+<text x="1173" y="607" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" letter-spacing="1.3" fill="#8daacb">3 RESULTS</text>
+
+<!-- Gear result selected -->
+<rect x="334" y="623" width="286" height="201" rx="34" fill="#030b19" opacity=".5" filter="url(#smallShadow)"/>
+<rect x="338" y="624" width="281" height="198" rx="33" fill="url(#selectedTile)" stroke="#48a0ff" stroke-width="4"/>
+<ellipse cx="479" cy="794" rx="85" ry="12" fill="#05101e" opacity=".35" filter="url(#smallShadow)"/>
+<use href="#gearArt" xlink:href="#gearArt" transform="translate(477 720) rotate(-8) scale(.85 .77)"/>
+
+<!-- Bolt result -->
+<rect x="635" y="624" width="264" height="198" rx="33" fill="url(#tile)" stroke="#344a64" stroke-width="1.5"/>
+<ellipse cx="772" cy="785" rx="92" ry="13" fill="#05101e" opacity=".35" filter="url(#smallShadow)"/>
+<use href="#boltArt" xlink:href="#boltArt" transform="translate(764 721) rotate(-35) scale(.89 .87)"/>
+
+<!-- Bearing result -->
+<rect x="916" y="624" width="264" height="198" rx="33" fill="url(#tile)" stroke="#344a64" stroke-width="1.5"/>
+<ellipse cx="1049" cy="791" rx="87" ry="12" fill="#05101e" opacity=".35" filter="url(#smallShadow)"/>
+<use href="#bearingArt" xlink:href="#bearingArt" transform="translate(1048 718) rotate(9) scale(.89 .91)"/>
+
+</svg>

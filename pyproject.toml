@@ -1,0 +1,35 @@
+[project]
+name = "personal-website"
+version = "0.1.0"
+requires-python = ">=3.12,<3.14"
+dependencies = [
+    "deep-translator>=1.11.4,<2",
+    "ftfy>=6.2",
+    "nicegui>=3.18.0,<4",
+    "numpy>=1.26,<3",
+    "pillow>=10,<13",
+    "regex>=2024.4.16",
+    "torch>=2.2",
+    "torchvision>=0.17",
+    "tqdm>=4.66",
+    "clip @ git+https://github.com/openai/CLIP.git",
+]
+
+[dependency-groups]
+test = ["pytest>=8", "httpx>=0.28,<1"]
+browser = ["playwright>=1.56,<2"]
+
+[tool.pytest.ini_options]
+testpaths = ["demos/clip_search_minimal/tests", "tests"]
+pythonpath = [".", "demos/clip_search_minimal"]
+markers = ["browser: critical browser workflows (enable with --run-browser)"]
+
+# The CLIP demo explicitly uses CPU inference.
+[tool.uv.sources]
+torch = [{ index = "pytorch-cpu", marker = "sys_platform == 'linux' or sys_platform == 'win32'" }]
+torchvision = [{ index = "pytorch-cpu", marker = "sys_platform == 'linux' or sys_platform == 'win32'" }]
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true

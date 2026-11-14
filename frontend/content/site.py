@@ -1,0 +1,122 @@
+"""Static EN/FR portfolio copy and homepage catalogue."""
+
+COPY = {
+    'EN': {
+        'nav': ['Home','Business Solutions', 'Academic Projects', 'Research Papers', 'About'],
+        'eyebrow': 'AI ENGINEER   •   WORKFLOW AUTOMATION   •   AGENTIC AI',
+        'pitch': 'Automating the mundane to help teams focus on high-value tasks',
+        'featured': 'Academic Projects',
+        'research_heading': 'Research Papers',
+        'research_project_title': 'Convex DeepStack',
+        'show_all_academic': 'Show all academic projects',
+        'explore': 'Business Solutions - Live Demos',
+        'show_all': 'Show all',
+        'show_all_business': 'Show all business solutions',
+        'show_all_research': 'Show all research papers and academic projects',
+        'clip_title': 'PartFinder',
+        'clip_description': 'Find mechanical parts using an image or text',
+        'clip_image_alt': 'PartFinder searches an inventory by photo or text, finds a matching plastic clip, and identifies its storage bin.',
+        'flowdesk_title': 'FlowDesk',
+        'flowdesk_description': 'Automate request routing and follow-up',
+        'flowdesk_image_alt': 'FlowDesk request routing and follow-up workflow illustration.',
+        'procurematch_title': 'ProcureMatch',
+        'procurematch_description': 'Match invoices to purchase orders and flag discrepancies',
+        'procurematch_image_alt': 'ProcureMatch compares financial documents and flags discrepancies using OCR.',
+        'dark_theme': 'Switch to dark mode',
+        'light_theme': 'Switch to light mode',
+        'projects': [
+            'Self Driving Car',
+            'Seizures in EEGs',
+            'Rocket Landing',
+            'Ball Valve Anomaly Detection',
+        ],
+        'portrait_placeholder': 'Add assets/portrait.png',
+        'about': {
+            'eyebrow': 'ABOUT ME',
+            'title': 'Engineer, builder, and lifelong learner.',
+            'intro': "Hi, I’m Julien Gouraud, an engineer passionate about artificial intelligence, software development, and building technology that solves real-world problems.",
+            'journey_title': 'A journey across countries and disciplines',
+            'journey': [
+                'Originally from France, my journey has taken me through Germany and eventually to Switzerland, where I pursued my engineering studies at EPFL in Lausanne. Living in different countries has shaped how I approach both life and work, teaching me to adapt to new environments, embrace different perspectives, and stay curious.',
+                "I started with a Bachelor’s degree in Mechanical Engineering, developing a strong foundation in mathematics, physics, and analytical problem-solving. I then pursued a Master’s degree in Automation and Control, progressively specializing in machine learning, deep learning, and artificial intelligence.",
+            ],
+            'work_title': 'From engineering principles to intelligent software',
+            'work': [
+                "Today, I focus on designing practical AI-powered applications. I’ve built AI agents, intelligent search engines, RAG systems, APIs, and web applications—combining machine learning with software engineering.",
+                'Through academic research and industry experience, including my work at Asyril, I have explored both the theoretical and practical sides of AI: from trustworthy generative models to integrating intelligent systems into real products.',
+                'My mechanical engineering background still guides my work: I value structured thinking, understanding systems as a whole, and creating solutions that are innovative, reliable, and maintainable.',
+            ],
+            'beyond_title': 'Beyond engineering',
+            'hiking_title': 'Hiking',
+            'hiking': 'Living in Switzerland has given me the opportunity to discover the country through hiking. Exploring new trails and reaching a summit bring together physical challenge, discovery, and a sense of accomplishment. It is also an essential balance to software work: a chance to disconnect from screens, slow down, and appreciate the outdoors.',
+            'cooking_title': 'Cooking',
+            'cooking': 'Cooking is another form of exploration and creativity for me. I enjoy discovering cuisines, experimenting with flavors, and refining recipes down to the smallest details. Above all, it is a way of caring for others—bringing friends and family together around a table to share experiences that go beyond the food itself.',
+            'values': 'Curiosity · Continuous improvement · Meaningful experiences · Sharing',
+        },
+    },
+    'FR': {
+        'nav': ['Accueil', 'Solutions professionnelles', 'Projets académiques', 'Articles de recherche', 'À propos'],
+        'eyebrow': 'AUTOMATISATION   •   INGÉNIEUR IA   •   IA AGENTIQUE',
+        'pitch': "Des systèmes d’IA concrets, des agents au déploiement.",
+        'featured': 'Projets académiques',
+        'research_heading': 'Articles de recherche',
+        'research_project_title': 'Convex DeepStack',
+        'show_all_academic': 'Voir tous les projets académiques',
+        'explore': 'Démos interactives & produits concrets',
+        'show_all': 'Tout voir',
+        'show_all_business': 'Voir toutes les solutions professionnelles',
+        'show_all_research': 'Voir tous les articles de recherche et projets académiques',
+        'clip_title': 'Moteur de recherche basé sur CLIP',
+        'clip_description': 'Trouvez des pièces mécaniques avec une image, une description ou les deux.',
+        'clip_image_alt': 'PartFinder recherche une pièce par photo ou texte, retrouve un clip en plastique et identifie son bac de stockage.',
+        'flowdesk_title': 'FlowDesk',
+        'flowdesk_description': 'Automatisez l’acheminement des demandes et leur suivi',
+        'flowdesk_image_alt': 'Illustration du routage et du suivi des demandes avec FlowDesk.',
+        'procurematch_title': 'ProcureMatch',
+        'procurematch_description': 'Outil de signalement automatique des écarts financiers avec OCR',
+        'procurematch_image_alt': 'ProcureMatch compare les documents financiers et signale les écarts avec OCR.',
+        'dark_theme': 'Activer le mode sombre',
+        'light_theme': 'Activer le mode clair',
+        'projects': [
+            'Planification de conduite autonome',
+            'Détection épilépsie via EEG',
+            'Atterrissage de fusée par MPC',
+            'Anomalies des vannes hydrauliques',
+        ],
+        'portrait_placeholder': 'Ajouter assets/portrait.png',
+        'about': {
+            'eyebrow': 'À PROPOS DE MOI',
+            'title': 'Ingénieur, créateur et apprenant passionné.',
+            'intro': "Bonjour, je m’appelle Julien Gouraud, je suis ingénieur passionné par l’intelligence artificielle, le développement logiciel et la création de solutions technologiques répondant à des problématiques concrètes.",
+            'journey_title': 'Un parcours entre pays et disciplines',
+            'journey': [
+                'Originaire de France, mon parcours m’a conduit en Allemagne, puis en Suisse, où j’ai poursuivi mes études d’ingénieur à l’EPFL, à Lausanne. Évoluer dans différents pays et environnements culturels a profondément influencé ma manière d’aborder les choses, en m’apprenant à m’adapter, à m’ouvrir à de nouvelles perspectives et à cultiver ma curiosité.',
+                'J’ai commencé par un Bachelor en génie mécanique, qui m’a permis d’acquérir de solides bases en mathématiques, en physique et en résolution de problèmes complexes. J’ai ensuite poursuivi un Master en automatique et systèmes de contrôle, en m’orientant progressivement vers le machine learning, le deep learning et l’intelligence artificielle.',
+            ],
+            'work_title': 'Des principes de l’ingénierie aux logiciels intelligents',
+            'work': [
+                'Aujourd’hui, je me consacre à la conception d’applications intégrant l’intelligence artificielle. J’ai notamment travaillé sur des agents IA, des moteurs de recherche intelligents, des systèmes RAG, des API et des applications web, en associant machine learning et ingénierie logicielle.',
+                'À travers mes projets de recherche et mes expériences professionnelles, notamment chez Asyril, j’ai exploré aussi bien les aspects théoriques que pratiques de l’IA, de l’étude de modèles génératifs fiables à l’intégration de systèmes intelligents dans des applications concrètes.',
+                'Ma formation initiale en génie mécanique continue d’influencer ma manière de travailler : j’accorde une grande importance à la rigueur, à la compréhension globale des systèmes et à la recherche de solutions innovantes, robustes et durables.',
+            ],
+            'beyond_title': 'Au-delà de l’ingénierie',
+            'hiking_title': 'Randonnée',
+            'hiking': 'Vivre en Suisse m’a donné l’occasion de découvrir le pays à travers la randonnée. Explorer de nouveaux sentiers et gravir des sommets mêle effort physique, découverte et satisfaction. C’est aussi un équilibre essentiel avec mon activité professionnelle : une manière de déconnecter des écrans, de prendre du recul et de profiter pleinement de la nature.',
+            'cooking_title': 'Cuisine',
+            'cooking': 'La cuisine est pour moi un terrain de découverte et de créativité. J’aime explorer de nouvelles cuisines, expérimenter des associations de saveurs et perfectionner mes recettes en prêtant attention aux détails. Mais c’est surtout une façon de prendre soin des autres, de réunir mes proches autour d’une table et de partager des moments qui vont bien au-delà du repas.',
+            'values': 'Curiosité · Dépassement de soi · Souci du détail · Partage',
+        },
+    },
+}
+
+PROJECT_IMAGES = ['driving-planning.svg', 'eeg-decoding.svg', 'rocket-landing.svg', 'ball-valve-anomaly.svg']
+
+DEMO_IMAGES = [
+    ('clip', 'PartFinder illustration.png'),
+    ('flowdesk', 'FlowDesk illustration.jpg'),
+    ('procurematch', 'ProcureMatch illustration.png'),
+]
+
+DEMO_ROUTES = {'clip': '/partfinder', 'flowdesk': '/flowdesk', 'procurematch': '/procurematch'}
+
+NAV_ICONS = ['home', 'svguse:/assets/microchip-ai.svg#microchip-ai', 'school', 'article', 'person_outline']

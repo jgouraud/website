@@ -1,0 +1,33 @@
+[project]
+name = "clip-search-minimal"
+version = "1.0.0"
+description = "Local, read-only CLIP-powered image and text similarity search"
+requires-python = ">=3.12,<3.14"
+dependencies = [
+  "deep-translator>=1.11.4,<2",
+  "ftfy>=6.2",
+  "nicegui>=3.18.0,<4",
+  "numpy>=1.26,<3",
+  "pillow>=10,<13",
+  "regex>=2024.4.16",
+  "torch>=2.2",
+  "torchvision>=0.17",
+  "tqdm>=4.66",
+  "clip @ git+https://github.com/openai/CLIP.git",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8", "httpx>=0.28,<1"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.uv.sources]
+torch = [{ index = "pytorch-cpu", marker = "sys_platform == 'linux' or sys_platform == 'win32'" }]
+torchvision = [{ index = "pytorch-cpu", marker = "sys_platform == 'linux' or sys_platform == 'win32'" }]
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true

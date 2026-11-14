@@ -1,0 +1,25 @@
+# Local environments, including preserved environments from another OS.
+.venv*/
+**/.venv*/
+/bin/
+/include/
+/lib/
+/lib64
+/pyvenv.cfg
+**/__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+test-results/
+playwright-report/
+.env
+.env.*
+!.env.example
+
+# Catalogs, generated previews, models, and temporary build state are local data.
+demos/clip_search_minimal/data/
+demos/clip_search_minimal/models/
+*.build.lock
+.catalog-*/
+.catalog-stage-*/
