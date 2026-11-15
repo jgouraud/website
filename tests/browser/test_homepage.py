@@ -47,6 +47,15 @@ def test_home_navigation_selects_its_showcase_row(page, homepage_url):
     expect(page.locator('.projects-section .showcase-collapse')).to_have_css('opacity', '0')
 
 
+def test_clicking_partfinder_card_opens_demo(page, homepage_url):
+    from playwright.sync_api import expect
+
+    page.goto(homepage_url, wait_until='networkidle')
+    page.get_by_role('group', name=re.compile('^PartFinder:')).click()
+    expect(page).to_have_url(re.compile(r'/partfinder\?lang=EN'))
+    expect(page.get_by_role('heading', name='Find mechanical parts from an image or a description.')).to_be_visible()
+
+
 def test_inline_demo_reveal_preserves_arrow_and_restores_academic_cards(page, homepage_url):
     from playwright.sync_api import expect
 
@@ -61,7 +70,7 @@ def test_inline_demo_reveal_preserves_arrow_and_restores_academic_cards(page, ho
     after = image.bounding_box()
     assert abs(after['width'] - before['width']) < 1
     assert abs(after['height'] - before['height']) < 1
-    card.get_by_role('link', name='PartFinder', exact=True).click()
+    card.locator('.demo-arrow').click()
     expect(page).to_have_url(re.compile(r'/partfinder\?lang=EN'))
     expect(page.get_by_role('heading', name='Find mechanical parts from an image or a description.')).to_be_visible()
 
@@ -74,7 +83,7 @@ def test_touch_reveal_and_arrow_do_not_conflict(browser, homepage_url):
         page = context.new_page()
         page.goto(homepage_url, wait_until='networkidle')
         card = page.get_by_role('group', name=re.compile('^PartFinder:'))
-        card.get_by_role('link', name='PartFinder', exact=True).tap()
+        card.locator('.demo-arrow').tap()
         expect(page).to_have_url(re.compile(r'/partfinder\?lang=EN'))
         expect(page.get_by_role('heading', name='Find mechanical parts from an image or a description.')).to_be_visible()
     finally:

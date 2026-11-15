@@ -204,9 +204,11 @@ body {
 .demo-illustration {
     display: block; width: 100%; height: auto;
 }
+.demo-card-overlay { position: absolute; inset: 0; z-index: 1; display: block; }
+.demo-card-overlay:focus-visible { outline: 3px solid var(--blue); outline-offset: -3px; }
 .demo-card .demo-arrow {
     position: absolute; right: 3px; top: calc(100cqw * 416 / 1536 - 3px); width: 34px; height: 34px;
-    z-index: 1; cursor: pointer; text-decoration: none;
+    z-index: 2; cursor: pointer; text-decoration: none;
     transform: translateY(-100%); color: #0759b2; background: rgba(248, 252, 255, .96);
     border: 1px solid rgba(124, 183, 255, .55);
     animation: demo-arrow-pulse 10s ease-in-out infinite;

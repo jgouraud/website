@@ -23,8 +23,8 @@ def demo_card(title: str, description: str, illustration: str, alt: str,
     """Business card with a compact banner that expands on hover/focus."""
     source = asset_url(illustration)
     with ui.card().props(
-        f'flat tabindex=0 role=group aria-label="{title}: {description}"'
-    ).classes('demo-card showcase-card' + (' demo-card-clickable' if destination else '')) as card:
+        f'flat role=group aria-label="{title}: {description}"'
+    ).classes('demo-card showcase-card' + (' demo-card-clickable' if destination else '')):
         with ui.element('div').classes('demo-banner'):
             if (ASSET_DIR / illustration).is_file():
                 ui.element('img').props(
@@ -35,22 +35,13 @@ def demo_card(title: str, description: str, illustration: str, alt: str,
                     ui.icon('dashboard_customize')
                     ui.label(title)
             if destination:
+                ui.link(target=destination).classes('demo-card-overlay').props(
+                    f'aria-label="{title}" title="{title}"'
+                )
                 with ui.link(target=destination).classes('circle-arrow demo-arrow').props(
                     f'aria-label="{title}" title="{title}"'
                 ):
                     ui.icon('arrow_forward').props('aria-hidden=true')
-
-    if destination:
-        # Both mouse and keyboard can open the complete internal demo page.
-        card.on('click', js_handler=(
-            f'event => {{ if (!event.target.closest("a")) '
-            f'window.location.assign("{destination}"); }}'
-        ))
-        card.on('keydown', js_handler=(
-            f'event => {{ if ((event.key === "Enter" || event.key === " ") '
-            f'&& event.target === event.currentTarget) {{ event.preventDefault(); '
-            f'window.location.assign("{destination}"); }} }}'
-        ))
 
 def project_card(title: str, illustration: str, destination: str = '',
                  *, icon_name: str = 'school', fallback_label: str = '') -> None:

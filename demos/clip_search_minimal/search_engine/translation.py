@@ -1,20 +1,28 @@
 """Language-normalization for text sent to CLIP."""
 
+import logging
+
 from deep_translator import GoogleTranslator
+from deep_translator.exceptions import BaseError
+from requests.exceptions import RequestException
 
 from search_engine.validation import validate_description
 
 
-def translate_to_english(text: str) -> str:
-    """Detect the source language and return an English query.
+LOGGER = logging.getLogger('partfinder')
 
-    Google Translate's ``auto`` source mode detects the language. English text is
-    returned unchanged, while text in another supported language is translated.
-    """
+
+def translate_to_english(text: str) -> str:
+    """Translate when available; use the original query if the optional provider fails."""
     query = validate_description(text)
     if not query:
         return ''
-    translated = GoogleTranslator(source='auto', target='en').translate(query)
+    try:
+        translated = GoogleTranslator(source='auto', target='en').translate(query)
+    except (BaseError, RequestException) as exc:
+        LOGGER.warning('translation_unavailable error_type=%s', type(exc).__name__)
+        return query
     if not isinstance(translated, str):
-        raise ValueError('The translation service returned an invalid response.')
+        LOGGER.warning('translation_invalid_response')
+        return query
     return validate_description(translated)
