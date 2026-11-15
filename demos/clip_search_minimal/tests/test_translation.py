@@ -48,3 +48,15 @@ def test_invalid_provider_response_falls_back_to_original_query(monkeypatch):
 
     monkeypatch.setattr(translation, 'GoogleTranslator', InvalidTranslator)
     assert translation.translate_to_english('a toothed gear') == 'a toothed gear'
+
+
+def test_unexpected_provider_failure_falls_back_to_original_query(monkeypatch):
+    class BrokenTranslator:
+        def __init__(self, **kwargs):
+            pass
+
+        def translate(self, text):
+            raise RuntimeError('unexpected provider response')
+
+    monkeypatch.setattr(translation, 'GoogleTranslator', BrokenTranslator)
+    assert translation.translate_to_english('a toothed gear') == 'a toothed gear'

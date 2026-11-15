@@ -3,8 +3,6 @@
 import logging
 
 from deep_translator import GoogleTranslator
-from deep_translator.exceptions import BaseError
-from requests.exceptions import RequestException
 
 from search_engine.validation import validate_description
 
@@ -19,7 +17,11 @@ def translate_to_english(text: str) -> str:
         return ''
     try:
         translated = GoogleTranslator(source='auto', target='en').translate(query)
-    except (BaseError, RequestException) as exc:
+    # Translation is an optional convenience before local CLIP inference. The
+    # provider can also fail while parsing a response, which is not always
+    # exposed as one of its documented exception types. Never let that make a
+    # valid search query unusable.
+    except Exception as exc:
         LOGGER.warning('translation_unavailable error_type=%s', type(exc).__name__)
         return query
     if not isinstance(translated, str):
