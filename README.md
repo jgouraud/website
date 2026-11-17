@@ -25,6 +25,9 @@ uv run --locked frontend/main.py
 
 Then open **http://localhost:8080**.
 
+`uv run --locked main.py` from the repository root starts the same frontend.
+Restart the server after pulling changes; automatic reload is disabled.
+
 The root uv environment includes the dependencies for PartFinder, using CPU
 builds of PyTorch and torchvision on Linux and Windows. It is part of this site
 at `/partfinder`; its existing catalog and checkpoint load once at website
@@ -52,7 +55,7 @@ for stage contracts, failure guarantees, resource limits, and artifact migration
 
 - The sun/moon button beside the language selector switches between light mode and a dark blue theme. Light mode is the default; the selected theme is remembered in this browser across language changes, reloads, and return visits.
 - Academic project cards fit their 25% smaller illustrations without the empty space left by visual scaling. Portrait tablets and phones use compact image-and-title rows. Navigation moves to a second row on tablets; small landscape phones use a single compact header row.
-- Live demo cards use the PartFinder, FlowDesk, and ProcureMatch illustrations in `assets/`. Each card initially shows only the top banner. Hover or focus a card to expand it in place and reveal the three story panels at the same image scale; tap to toggle on touch screens, or use Enter/Space and Escape with a focused card. The academic cards temporarily fold away to make room and return when the demo closes. Arrows remain accessible at the bottom-right of the top banner and pulse between their light/dark colors in a 10-second cycle, unless reduced motion is enabled. Set destinations in `DEMO_URLS` in `main.py` when ready; the links remain inactive until configured.
+- Live demo cards use illustrations in `frontend/assets/`. Hover or focus reveals the story panels; click or tap a card or its arrow to open its demo. Keyboard users can focus a link and press Enter. Destinations are defined in `DEMO_ROUTES` in `frontend/content/site.py`, including PartFinder at `/partfinder`.
 - **Navigation and most social buttons are placeholders.** The hero's LinkedIn button opens Julien Gouraud's LinkedIn profile in a new tab. The GitHub button still needs a destination. PartFinder is an integrated business-demo page with search, catalog browsing, and classification filtering.
 - Below the hero, **Business Solutions - Live Demos** presents PartFinder, FlowDesk, and ProcureMatch. **Research Papers & Academic Projects** presents the three academic projects.
 - The language switch is live. Select EN or FR to reload the page in that language; the selection is retained in the `?lang=EN` or `?lang=FR` URL. The copy for both languages is in the `COPY` dictionary.
