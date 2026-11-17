@@ -17,9 +17,11 @@ playwright-report/
 .env.*
 !.env.example
 
-# Catalogs, generated previews, models, and temporary build state are local data.
-demos/clip_search_minimal/data/
-demos/clip_search_minimal/models/
+# Versioned deployment artifacts use LFS; extracted previews remain local.
+demos/clip_search_minimal/data/*
+!demos/clip_search_minimal/data/deployment/
+demos/clip_search_minimal/models/*
+!demos/clip_search_minimal/models/ViT-B-32.pt
 *.build.lock
 .catalog-*/
 .catalog-stage-*/

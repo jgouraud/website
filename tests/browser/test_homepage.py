@@ -5,6 +5,17 @@ import pytest
 pytestmark = pytest.mark.browser
 
 
+def test_production_launcher_serves_partfinder_without_catalog(page, deployed_homepage_url):
+    from playwright.sync_api import expect
+
+    page.goto(deployed_homepage_url, wait_until='networkidle')
+    page.get_by_role('group', name=re.compile('^PartFinder:')).click()
+    expect(page).to_have_url(re.compile(r'/partfinder\?lang=EN'))
+    expect(page.get_by_role('heading', name='Find mechanical parts from an image or a description.')).to_be_visible()
+    expect(page.get_by_text('Search unavailable', exact=True)).to_be_visible()
+    expect(page.get_by_role('button', name='Search', exact=True)).to_be_disabled()
+
+
 def test_language_switch_and_reload_preserve_both_theme_choices(page, homepage_url):
     from playwright.sync_api import expect
 

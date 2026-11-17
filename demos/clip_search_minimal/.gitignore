@@ -11,3 +11,5 @@ models/*.pt
 models/*.pth
 data/images/*
 !data/images/.gitkeep
+!data/deployment/catalog.db
+!models/ViT-B-32.pt

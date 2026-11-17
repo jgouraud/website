@@ -4,6 +4,8 @@ All route views, copy, and CSS are owned by separate modules/files.
 Run from this directory: python main.py
 """
 
+import os
+
 from nicegui import app, ui
 
 from app_config import ASSET_DIR, SCRIPTS_DIR, STYLES_DIR
@@ -23,7 +25,9 @@ def main() -> None:
     ui.run(
         title='Julien Gouraud | Portfolio',
         favicon=favicon if favicon.is_file() else None,
-        port=8080,
+        host='0.0.0.0',
+        port=int(os.environ.get('PORT', '8080')),
+        show=False,
         reload=False,
     )
 

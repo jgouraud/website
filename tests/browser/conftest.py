@@ -20,6 +20,7 @@ def _serve(tmp_path_factory, command_for_port, extra_environment=None):
     log_path = tmp_path_factory.mktemp('web-server') / 'server.log'
     environment = {key: value for key, value in os.environ.items() if key != 'PYTEST_CURRENT_TEST'}
     environment.update(extra_environment or {})
+    environment['PORT'] = str(port)
     process = subprocess.Popen(command_for_port(port), cwd=ROOT, stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
                                text=True, encoding='utf-8', env={**environment, 'PYTHONUTF8': '1'},
                                creationflags=subprocess.CREATE_NO_WINDOW if sys.platform == 'win32' else 0)
@@ -51,6 +52,14 @@ def _serve(tmp_path_factory, command_for_port, extra_environment=None):
             process.wait(timeout=5)
         reader.join(timeout=2)
         process.stdout.close()
+
+
+@pytest.fixture(scope='session')
+def deployed_homepage_url(tmp_path_factory):
+    missing_catalog = tmp_path_factory.mktemp('missing-catalog') / 'catalog.db'
+    with _serve(tmp_path_factory, lambda port: [sys.executable, str(ROOT / 'main.py')],
+                {'CLIP_SEARCH_DB': str(missing_catalog)}) as url:
+        yield url
 
 
 @pytest.fixture(scope='session')

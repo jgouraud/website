@@ -1,0 +1,3 @@
+demos/clip_search_minimal/models/ViT-B-32.pt filter=lfs diff=lfs merge=lfs -text
+demos/clip_search_minimal/data/deployment/catalog.db filter=lfs diff=lfs merge=lfs -text
+demos/clip_search_minimal/data/deployment/images.zip filter=lfs diff=lfs merge=lfs -text
